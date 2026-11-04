@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E76F51;
+  --color-primary-hover: #D9593B;
+  --color-secondary: #F4A261;
+  --color-accent: #2A9D8F;
+  --color-accent-dark: #21867A;
+  --color-dark: #264653;
+  --color-dark-deep: #1A303A;
+  --color-cream: #FFF8F2;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #FFF8F2;
+  color: #264653;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: #131f24;
+  color: #f8fafc;
+}
+
+/* Material Icons baseline alignment */
+.mat-icon {
+  font-family: 'Material Icons' !important;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 111, 81, 0.12);
+}
+
+.dark .glass-card {
+  background: rgba(27, 42, 50, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E76F51;
+  border-radius: 9999px;
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D9593B;
+}
+
+/* Print bill styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  app-bill-modal, app-bill-modal * {
+    visibility: visible;
+  }
+  app-bill-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

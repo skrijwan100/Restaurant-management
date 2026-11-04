@@ -1,0 +1,6 @@
+{
+  "name": "Savoria - Premium Restaurant Management & Dining Platform",
+  "description": "Comprehensive restaurant management system featuring live table reservations, online ordering, admin dashboard, analytics, food and table management, and customer portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,18 @@
+<div class="min-h-screen flex flex-col bg-[#FFF8F2] dark:bg-[#131f24] text-slate-800 dark:text-slate-100 transition-colors duration-200">
+  
+  @if (!isAdminRoute()) {
+    <app-navbar></app-navbar>
+  }
+
+  <main class="flex-1">
+    <router-outlet></router-outlet>
+  </main>
+
+  @if (!isAdminRoute()) {
+    <app-footer></app-footer>
+  }
+
+  <!-- Toast Container -->
+  <app-toast></app-toast>
+
+</div>
